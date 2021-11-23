@@ -1,8 +1,8 @@
 <?php
 
-include("./src/app/database/logic.php");
-include("./src/app/validate/rights.php");
-include("./src/app/validate/validateRecipe.php");
+include("../database/logic.php");
+include("../validate/rights.php");
+include("../validate/validateRecipe.php");
 
 $table = 'recipe';
 
@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['delete_id'])) {
     adminOnly();
     $count = delete($table, $_GET['delete_id']);
-    header("location: ./src/admin/recipe/list_recipe.php");
+    header("location: /src/admin/recipe/list_recipe.php");
     exit();
 }
 
@@ -34,7 +34,7 @@ if (isset($_POST['add-recipe'])) {
 
     if (!empty($_FILES['image']['name'])) {
         $image_name = time() . '_' . $_FILES['image']['name'];
-        $destination =  "../img/" . $image_name;
+        $destination =  "../src/img/" . $image_name;
 
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
@@ -52,9 +52,9 @@ if (isset($_POST['add-recipe'])) {
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = create($table, $_POST);
         if (($_SESSION['admin'])) {
-            header("location: ./src/admin/recipe/list_recipe.php");
+            header("location: /src/admin/recipe/list_recipe.php");
         } else {
-            header("location: ./index.php");
+            header("location: /src/index.php");
         }        exit();
     } else {
         $recipe_title = $_POST['recipe_title'];
@@ -69,7 +69,7 @@ if (isset($_POST['update-recipe'])) {
 
     if (!empty($_FILES['image']['name'])) {
         $image_name = time() . '_' . $_FILES['image']['name'];
-        $destination =  "../img/" . $image_name;
+        $destination =  "../src/img/" . $image_name;
 
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
@@ -88,7 +88,7 @@ if (isset($_POST['update-recipe'])) {
         $_POST['recipe_ingredients'] = htmlentities($_POST['recipe_ingredients']);
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = update($table, $id, $_POST);
-        header("location: ./src/admin/recipe/list_recipe.php");
+        header("location: /src/admin/recipe/list_recipe.php");
     } else {
         $recipe_title = $_POST['recipe_title'];
         $recipe_ingredients = $_POST['recipe_ingredients'];

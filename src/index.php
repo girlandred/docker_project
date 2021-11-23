@@ -24,7 +24,7 @@ if (isset($_POST['search-term'])) {
 </head>
 
 <body>
-    <?php include("./app/nav_bars/navbar.php"); ?>
+    <?php include("/app/nav_bars/navbar.php"); ?>
     <div class="content container clearfix">
         <div class="row">
             <?php foreach ($recipes as $recipe) : ?>
