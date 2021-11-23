@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['delete_id'])) {
     adminOnly();
     $count = delete($table, $_GET['delete_id']);
-    header("location: ./list_recipe.php");
+    header("location: ./src/admin/recipe/list_recipe.php");
     exit();
 }
 
@@ -52,7 +52,7 @@ if (isset($_POST['add-recipe'])) {
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = create($table, $_POST);
         if (($_SESSION['admin'])) {
-            header("location: ./list_recipe.php");
+            header("location: ./src/admin/recipe/list_recipe.php");
         } else {
             header("location: ./index.php");
         }        exit();
@@ -88,7 +88,7 @@ if (isset($_POST['update-recipe'])) {
         $_POST['recipe_ingredients'] = htmlentities($_POST['recipe_ingredients']);
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = update($table, $id, $_POST);
-        header("location: ./list_recipe.php");
+        header("location: ./src/admin/recipe/list_recipe.php");
     } else {
         $recipe_title = $_POST['recipe_title'];
         $recipe_ingredients = $_POST['recipe_ingredients'];
