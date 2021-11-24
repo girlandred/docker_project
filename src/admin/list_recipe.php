@@ -1,4 +1,5 @@
-<?php include("app/controllers/recipe.php");
+<?php include("../../path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/recipe.php");
 adminOnly();
 ?>
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ adminOnly();
 
 <body>
 
-    <?php include("app/nav_bars/navbar_a.php"); ?>
+    <?php include(ROOT_PATH . "/app/nav_bars/navbar_a.php"); ?>
 
 
     <div class="container">

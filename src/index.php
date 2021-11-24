@@ -1,5 +1,6 @@
 <?php
-include("/app/controllers/recipe.php");
+include("path.php");
+include(ROOT_PATH . "/app/controllers/recipe.php");
 $recipes = array();
 if (isset($_POST['search-term'])) {
     $recipesTitle = "You searched for '" . $_POST['search-term'] . "'";
@@ -24,12 +25,12 @@ if (isset($_POST['search-term'])) {
 </head>
 
 <body>
-    <?php include("/app/nav_bars/navbar.php"); ?>
+    <?php include(ROOT_PATH . "/app/nav_bars/navbar.php"); ?>
     <div class="content container clearfix">
         <div class="row">
             <?php foreach ($recipes as $recipe) : ?>
                 <div class="col-12 col-md-6 col-lg-4 recipe clearfix">
-                    <img src="<?php echo '../img/' . $recipe['image']; ?>" alt="" class="recipe-image">
+                    <img src="<?php echo BASE_URL . 'img/' . $recipe['image']; ?>" alt="" class="recipe-image">
                     <div class="recipe-preview">
                         <h2><a href="one_recipe.php?id=<?php echo $recipe['id']; ?>">
                                 <?php echo $recipe['recipe_title']; ?>

@@ -1,4 +1,5 @@
-<?php include("/app/controllers/recipe.php");
+<?php include("path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/recipe.php");
 
 if (isset($_GET['id'])) {
     $recipe = selectOne('recipe', ['id' => $_GET['id']]);
@@ -22,7 +23,7 @@ $recipes = selectAll('recipe');
 
 <body>
 
-    <?php include("/app/nav_bars/navbar.php"); ?>
+    <?php include(ROOT_PATH . "/app/nav_bars/navbar.php"); ?>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -32,7 +33,7 @@ $recipes = selectAll('recipe');
                         <h1 class="recipe-title">
                             <?php echo $recipe['recipe_title']; ?>title
                         </h1>
-                        <img src="<?php echo '../img/' . $recipe['image']; ?>" alt="" class="recipe-image" />
+                        <img src="<?php echo BASE_URL . 'img/' . $recipe['image']; ?>" alt="" class="recipe-image" />
                         <!-- <img src="../img/1.jpg" alt="" class="recipe-image" /> -->
                         <div class="recipe-content">
                             <?php echo html_entity_decode($recipe['recipe_ingredients']); ?>

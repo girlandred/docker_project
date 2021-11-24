@@ -1,4 +1,5 @@
-<?php include("app/controllers/recipe.php");
+<?php include("../../path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/recipe.php");
 adminOnly();
 ?>
 <!DOCTYPE html>
@@ -16,13 +17,13 @@ adminOnly();
 </head>
 
 <body>
-    <?php include("app/nav_bars/navbar_a.php"); ?>
+    <?php include(ROOT_PATH . "/app/nav_bars/navbar_a.php"); ?>
 
       <div class="container">
         <div class="row">
             <div class="content col-12">
                 <h2 class="page-title">Edit recipes</h2>
-                <?php include("./src/app/validate/formErrors.php"); ?>
+                <?php include(ROOT_PATH . "/app/validate/formErrors.php"); ?>
 
  
                 <form action="edit.php" method="post" enctype="multipart/form-data">

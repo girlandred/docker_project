@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require('./connect.php');
+require('/connect.php');
 
 function executeQuery($sql, $data)
 {

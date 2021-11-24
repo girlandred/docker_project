@@ -1,4 +1,5 @@
-<?php include("/app/controllers/recipe.php"); ?>
+<?php include("path.php"); ?>
+<?php include(ROOT_PATH ."/app/controllers/recipe.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +16,9 @@
 
 <body>
     <?php if (($_SESSION['admin'])) {
-        include("/app/nav_bars/navbar_a.php");
+        include(ROOT_PATH . "/app/nav_bars/navbar_a.php");
     } else {
-        include("/app/nav_bars/navbar.php");
+        include(ROOT_PATH . "/app/nav_bars/navbar.php");
     }
     ?>
     <div class="container">
@@ -26,7 +27,7 @@
             <div class="content col-12">
                 <h2 class="page-title">Add recipe</h2>
 
-                <?php include("/src/app/validate/formErrors.php"); ?>
+                <?php include(ROOT_PATH . "/src/app/validate/formErrors.php"); ?>
 
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">

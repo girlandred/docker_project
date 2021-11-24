@@ -1,4 +1,5 @@
-<?php include("/app/controllers/users.php"); ?>
+<?php include("path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/users.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +22,7 @@
       <div class="col-6">
         <form action="register.php" method="post">
           <h2 class="form-title">Register</h2>
+          <?php include(ROOT_PATH . "/app/validate/formErrors.php"); ?>
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" name="username" id="username" value="<?php echo $username; ?>" class="text-input form-control">
@@ -37,7 +39,7 @@
           <div class="d-grid gap-2 col-3 mx-auto">
             <button class="btn btn-primary" type="submit" name="register-btn">Register</button>
             <span class=" m-auto">Or</span>
-            <a href="<?php echo './login.php' ?>" class="btn btn-info" type="button">Sign In</a>
+            <a href="<?php echo BASE_URL . '/login.php' ?>" class="btn btn-info" type="button">Sign In</a>
           </div>
 
         </form>
