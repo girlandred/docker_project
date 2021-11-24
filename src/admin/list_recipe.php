@@ -1,4 +1,4 @@
-<?php include("../../path.php"); ?>
+<?php include("../path.php"); ?>
 <?php include(ROOT_PATH . "/app/controllers/recipe.php");
 adminOnly();
 ?>
@@ -11,9 +11,9 @@ adminOnly();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <link href="template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="template/css/all.min.css" rel="stylesheet">
-    <link href="template/css/custom.css" rel="stylesheet">
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/all.min.css" rel="stylesheet">
+    <link href="../template/css/custom.css" rel="stylesheet">
     <title>Admin Section - Manage recipe</title>
 </head>
 
@@ -38,8 +38,8 @@ adminOnly();
                             <tr>
                                 <td><?php echo $key + 1; ?></td>
                                 <td><?php echo $recipe['recipe_title'] ?></td>
-                                <td><a href="./edit.php?id=<?php echo $recipe['id']; ?>" class="edit">edit</a></td>
-                                <td><a href="./edit.php?delete_id=<?php echo $recipe['id']; ?>" class="delete">delete</a></td>
+                                <td><a href="edit.php?id=<?php echo $recipe['id']; ?>" class="edit">edit</a></td>
+                                <td><a href="edit.php?delete_id=<?php echo $recipe['id']; ?>" class="delete">delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -50,7 +50,7 @@ adminOnly();
         </div>
 
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="../template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

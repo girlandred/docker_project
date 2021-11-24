@@ -18,19 +18,19 @@ if (isset($_POST['search-term'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recipe</title>
 
-    <link href="template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="template/css/all.min.css" rel="stylesheet">
-    <link href="template/css/custom.css" rel="stylesheet">
+    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/template/css/all.min.css" rel="stylesheet">
+    <link href="/template/css/custom.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <?php include(ROOT_PATH . "/app/nav_bars/navbar.php"); ?>
+<?php include(ROOT_PATH . "/app/nav_bars/navbar.php"); ?>
     <div class="content container clearfix">
         <div class="row">
             <?php foreach ($recipes as $recipe) : ?>
                 <div class="col-12 col-md-6 col-lg-4 recipe clearfix">
-                    <img src="<?php echo BASE_URL . 'img/' . $recipe['image']; ?>" alt="" class="recipe-image">
+                    <img src="<?php echo BASE_URL . '/template/img/' . $recipe['image']; ?>" alt="" class="recipe-image">
                     <div class="recipe-preview">
                         <h2><a href="one_recipe.php?id=<?php echo $recipe['id']; ?>">
                                 <?php echo $recipe['recipe_title']; ?>
@@ -47,7 +47,7 @@ if (isset($_POST['search-term'])) {
             <?php endforeach; ?>
         </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

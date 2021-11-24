@@ -1,4 +1,4 @@
-<?php include("../../path.php"); ?>
+<?php include("../path.php"); ?>
 <?php include(ROOT_PATH . "/app/controllers/recipe.php");
 adminOnly();
 ?>
@@ -11,9 +11,9 @@ adminOnly();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Section - Edit recipes</title>
 
-    <link href="template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="template/css/all.min.css" rel="stylesheet">
-    <link href="template/css/custom.css" rel="stylesheet">
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/all.min.css" rel="stylesheet">
+    <link href="../template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,5 +51,5 @@ adminOnly();
             </div>
         </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="../template/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -25,7 +25,7 @@ function loginUser($user)
     if ($_SESSION['admin']) {
         header('location: ' . BASE_URL . '/admin/list_recipe.php');
     } else {
-        header("location: " . ROOT_PATH . "index.php");
+        header("location: " . BASE_URL . "/index.php");
     }
     exit();
 }

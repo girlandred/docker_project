@@ -16,9 +16,9 @@ $recipes = selectAll('recipe');
 <head>
     <title><?php echo $recipe['recipe_title']; ?></title>
 
-    <link href="template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="template/css/all.min.css" rel="stylesheet">
-    <link href="template/css/custom.css" rel="stylesheet">
+    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/template/css/all.min.css" rel="stylesheet">
+    <link href="/template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,10 +31,9 @@ $recipes = selectAll('recipe');
                 <div class="main-content-wrapper">
                     <div class="main-content single">
                         <h1 class="recipe-title">
-                            <?php echo $recipe['recipe_title']; ?>title
+                            <?php echo $recipe['recipe_title']; ?>
                         </h1>
-                        <img src="<?php echo BASE_URL . 'img/' . $recipe['image']; ?>" alt="" class="recipe-image" />
-                        <!-- <img src="../img/1.jpg" alt="" class="recipe-image" /> -->
+                        <img src="<?php echo BASE_URL . '/template/img/' . $recipe['image']; ?>" alt="" class="recipe-image" />
                         <div class="recipe-content">
                             <?php echo html_entity_decode($recipe['recipe_ingredients']); ?>
                         </div>

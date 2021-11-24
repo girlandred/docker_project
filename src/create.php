@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Recipe</title>
 
-    <link href="template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="template/css/all.min.css" rel="stylesheet">
-    <link href="template/css/custom.css" rel="stylesheet">
+    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/template/css/all.min.css" rel="stylesheet">
+    <link href="/template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,8 +26,6 @@
 
             <div class="content col-12">
                 <h2 class="page-title">Add recipe</h2>
-
-                <?php include(ROOT_PATH . "/src/app/validate/formErrors.php"); ?>
 
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
@@ -55,7 +53,7 @@
 
         </div>
     </div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

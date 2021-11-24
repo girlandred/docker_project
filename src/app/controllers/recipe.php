@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['delete_id'])) {
     adminOnly();
     $count = delete($table, $_GET['delete_id']);
-    header("location: ". BASE_URL . "/admin/recipe/list_recipe.php");
+    header("location: ". BASE_URL . "/admin/list_recipe.php");
     exit();
 }
 
@@ -34,7 +34,7 @@ if (isset($_POST['add-recipe'])) {
 
     if (!empty($_FILES['image']['name'])) {
         $image_name = time() . '_' . $_FILES['image']['name'];
-        $destination =  ROOT_PATH . "img/" . $image_name;
+        $destination =  ROOT_PATH . "/template/img/" . $image_name;
 
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
@@ -52,10 +52,10 @@ if (isset($_POST['add-recipe'])) {
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = create($table, $_POST);
         if (($_SESSION['admin'])) {
-            header("location: " . BASE_URL . "/admin/recipe/list_recipe.php");
+            header("location: " . BASE_URL . "/admin/list_recipe.php");
         } else {
-            header("location: " . ROOT_PATH . "index.php");
-        }        exit();
+            header("location: " . BASE_URL . "/index.php");
+        }       exit();
     } else {
         $recipe_title = $_POST['recipe_title'];
         $recipe_ingredients = $_POST['recipe_ingredients'];
@@ -69,7 +69,7 @@ if (isset($_POST['update-recipe'])) {
 
     if (!empty($_FILES['image']['name'])) {
         $image_name = time() . '_' . $_FILES['image']['name'];
-        $destination = ROOT_PATH . "img/" . $image_name;
+        $destination = ROOT_PATH . "/template/img/" . $image_name;
 
         $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
@@ -88,7 +88,7 @@ if (isset($_POST['update-recipe'])) {
         $_POST['recipe_ingredients'] = htmlentities($_POST['recipe_ingredients']);
         $_POST['recipe_instructions'] = htmlentities($_POST['recipe_instructions']);
         $recipe_id = update($table, $id, $_POST);
-        header("location: " . BASE_URL . "/admin/recipe/list_recipe.php");
+        header("location: " . BASE_URL . "/admin/list_recipe.php");
     } else {
         $recipe_title = $_POST['recipe_title'];
         $recipe_ingredients = $_POST['recipe_ingredients'];

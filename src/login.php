@@ -10,9 +10,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
 
-  <link href="template/css/bootstrap.min.css" rel="stylesheet">
-  <link href="template/css/all.min.css" rel="stylesheet">
-  <link href="template/css/custom.css" rel="stylesheet">
+  <link href="/template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/template/css/all.min.css" rel="stylesheet">
+  <link href="/template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
