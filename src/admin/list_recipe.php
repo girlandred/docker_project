@@ -11,9 +11,9 @@ adminOnly();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../template/css/all.min.css" rel="stylesheet">
-    <link href="../template/css/custom.css" rel="stylesheet">
+    <link href="../../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../template/css/all.min.css" rel="stylesheet">
+    <link href="../../template/css/custom.css" rel="stylesheet">
     <title>Admin Section - Manage recipe</title>
 </head>
 
@@ -50,7 +50,7 @@ adminOnly();
         </div>
 
     </div>
-    <script src="../template/js/bootstrap.bundle.min.js"></script>
+    <script src="../../template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

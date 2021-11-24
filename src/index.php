@@ -18,9 +18,9 @@ if (isset($_POST['search-term'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recipe</title>
 
-    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/template/css/all.min.css" rel="stylesheet">
-    <link href="/template/css/custom.css" rel="stylesheet">
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -47,7 +47,7 @@ if (isset($_POST['search-term'])) {
             <?php endforeach; ?>
         </div>
     </div>
-    <script src="/template/js/bootstrap.bundle.min.js"></script>
+    <script src="template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="../../template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../template/css/all.min.css" rel="stylesheet">
-    <link href="../../template/css/custom.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -39,7 +35,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL . '/admin/logout.php'; ?>">logout</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL . '/logout.php'; ?>">logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,7 +43,7 @@
         </div>
 
     </nav>
-    <script src="../../template/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

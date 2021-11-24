@@ -16,9 +16,9 @@ $recipes = selectAll('recipe');
 <head>
     <title><?php echo $recipe['recipe_title']; ?></title>
 
-    <link href="/template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/template/css/all.min.css" rel="stylesheet">
-    <link href="/template/css/custom.css" rel="stylesheet">
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,7 +47,7 @@ $recipes = selectAll('recipe');
         </div>
     </div>
     <div style="height: 200vh;"></div>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="template/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
