@@ -1,4 +1,4 @@
-<?php include("./src/app/controllers/recipe.php");
+<?php include("app/controllers/recipe.php");
 adminOnly();
 ?>
 <!DOCTYPE html>
@@ -9,15 +9,16 @@ adminOnly();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
     <title>Admin Section - Manage recipe</title>
 </head>
 
 <body>
 
-    <?php include("./src/app/nav_bars/navbar_a.php"); ?>
+    <?php include("app/nav_bars/navbar_a.php"); ?>
 
 
     <div class="container">

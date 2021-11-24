@@ -1,4 +1,4 @@
-<?php include("./app/controllers/users.php"); ?>
+<?php include("/app/controllers/users.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +9,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/all.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="template/css/all.min.css" rel="stylesheet">
+  <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
         <form action="login.php" method="post" class="">
           <h2 class="form-title">Login</h2>
-          <?php include("./src/app/validate/formErrors.php"); ?>
+          <?php include("/src/app/validate/formErrors.php"); ?>
 
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>

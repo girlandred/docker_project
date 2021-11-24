@@ -1,5 +1,5 @@
 <?php
-include("./app/controllers/recipe.php");
+include("/app/controllers/recipe.php");
 $recipes = array();
 if (isset($_POST['search-term'])) {
     $recipesTitle = "You searched for '" . $_POST['search-term'] . "'";
@@ -17,9 +17,9 @@ if (isset($_POST['search-term'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recipe</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 
 </head>
 

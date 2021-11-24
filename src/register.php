@@ -1,4 +1,4 @@
-<?php include("./app/controllers/users.php"); ?>
+<?php include("/app/controllers/users.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +10,9 @@
 
   <title>Register</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/all.min.css" rel="stylesheet" />
-  <link href="css/custom.css" rel="stylesheet" />
+  <link href="template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="template/css/all.min.css" rel="stylesheet">
+  <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>

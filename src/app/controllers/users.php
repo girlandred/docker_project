@@ -1,7 +1,7 @@
 <?php
-include("./src/app/database/logic.php");
-include("./src/app/validate/rights.php");
-include("./src/app/validate/validateUser.php");
+include("/app/database/logic.php");
+include("/app/validate/rights.php");
+include("/app/validate/validateUser.php");
 
 
 $table = 'users';
@@ -23,9 +23,9 @@ function loginUser($user)
     $_SESSION['admin'] = $user['admin'];
 
     if ($_SESSION['admin']) {
-        header('location: ./list_recipe.php');
+        header('location: /admin/list_recipe.php');
     } else {
-        header('location: ./index.php');
+        header('location: /src/index.php');
     }
     exit();
 }

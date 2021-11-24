@@ -1,4 +1,4 @@
-<?php include("./src/app/controllers/recipe.php");
+<?php include("app/controllers/recipe.php");
 adminOnly();
 ?>
 <!DOCTYPE html>
@@ -10,13 +10,13 @@ adminOnly();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Section - Edit recipes</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
-    <link href="/css/custom.css" rel="stylesheet">
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
-    <?php include("./src/app/nav_bars/navbar_a.php"); ?>
+    <?php include("app/nav_bars/navbar_a.php"); ?>
 
       <div class="container">
         <div class="row">

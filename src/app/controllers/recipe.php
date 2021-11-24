@@ -1,8 +1,8 @@
 <?php
 
-include("../database/logic.php");
-include("../validate/rights.php");
-include("../validate/validateRecipe.php");
+include("/app/database/logic.php");
+include("/app/validate/rights.php");
+include("/app/validate/validateRecipe.php");
 
 $table = 'recipe';
 

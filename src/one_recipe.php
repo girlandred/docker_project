@@ -1,7 +1,7 @@
-<?php include("./app/controllers/recipe.php");
+<?php include("/app/controllers/recipe.php");
 
 if (isset($_GET['id'])) {
-$recipe = selectOne('recipe', ['id' => $_GET['id']]);
+    $recipe = selectOne('recipe', ['id' => $_GET['id']]);
 }
 $recipes = selectAll('recipe');
 
@@ -15,14 +15,14 @@ $recipes = selectAll('recipe');
 <head>
     <title><?php echo $recipe['recipe_title']; ?></title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/all.min.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <?php include("./app/nav_bars/navbar.php"); ?>
+    <?php include("/app/nav_bars/navbar.php"); ?>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -33,7 +33,7 @@ $recipes = selectAll('recipe');
                             <?php echo $recipe['recipe_title']; ?>title
                         </h1>
                         <img src="<?php echo '../img/' . $recipe['image']; ?>" alt="" class="recipe-image" />
-                        <img src="../img/1.jpg" alt="" class="recipe-image" />
+                        <!-- <img src="../img/1.jpg" alt="" class="recipe-image" /> -->
                         <div class="recipe-content">
                             <?php echo html_entity_decode($recipe['recipe_ingredients']); ?>
                         </div>

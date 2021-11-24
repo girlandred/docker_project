@@ -1,4 +1,4 @@
-<?php include("./app/controllers/recipe.php"); ?>
+<?php include("/app/controllers/recipe.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Recipe</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template/css/all.min.css" rel="stylesheet">
+    <link href="template/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
     <?php if (($_SESSION['admin'])) {
-        include("./app/nav_bars/navbar_a.php");
+        include("/app/nav_bars/navbar_a.php");
     } else {
-        include("./app/nav_bars/navbar.php");
+        include("/app/nav_bars/navbar.php");
     }
     ?>
     <div class="container">
@@ -26,7 +26,7 @@
             <div class="content col-12">
                 <h2 class="page-title">Add recipe</h2>
 
-                <?php include("./src/app/validate/formErrors.php"); ?>
+                <?php include("/src/app/validate/formErrors.php"); ?>
 
                 <form action="create.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
